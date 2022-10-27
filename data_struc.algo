@@ -1,0 +1,40 @@
+ALGORITHM Valid_Sentence
+VAR
+    c : CHAR
+VAR
+    Istrue : BOOLEAN := false
+VAR
+    Nbp : INTEGER := 0
+
+BEGIN
+    WHILE (c <> "#") DO
+
+    read (c)
+
+    IF (is Digit(c) OR (c="+" and c="-" and c="*" and c="/" and c="(" and c=")"))
+    
+    Istrue := true
+
+    END_IF
+
+    IF (c="(")
+
+    Nbp = Nbp + 1    
+
+    END_IF
+
+    IF (c=")")
+
+    Nbp = Nbp - 1    
+
+    END_IF   
+
+    END_WHILE
+
+    IF (Nbp = 0 and Istrue = True) THEN
+        write ("This is a valid sentence")
+
+    ELSE
+        write ("This is not a valid sentence")
+    END_IF       
+END
